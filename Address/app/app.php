@@ -19,8 +19,14 @@
     });
 
     $app->post("/new_contact", function() use($app) {
-        $new_contact = new Contact($_POST['new_name'], $_POST['new_phone'], $_POST['new_address']);
+        $new_contact = new Contact($_POST['new_name'], $_POST['new_phone'], $_POST['new_address'], $_POST['gender']);
 
+// Get the right image
+        // if ($new_contact[3] = "Male") {
+        //     $new_contact->setSex("/images/male.jpg");
+        // }
+
+// No Duplicates
         if (!in_array($new_contact, Contact::getAll())){
             $new_contact->save();
         }

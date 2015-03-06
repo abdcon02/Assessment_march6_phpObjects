@@ -1,0 +1,63 @@
+body {
+    background-color: #8b7d7b;
+}
+
+.container {
+    background-color: #fff3e5;
+    width: auto;
+    max-width: 500px;
+    padding: 20px 40px 20px 40px;
+    margin: auto;
+}
+
+#inputs {
+    clear: both;
+}
+
+input {
+    border-radius: 2pt;
+    width: 25m;
+    border: 1px solid black;
+    display: block;
+    margin: 2px;
+}
+
+.gender {
+    display: inline;
+}
+
+button {
+    display: block;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contact {
+    border: 3px solid #f2a1a1;
+    padding: 10px;
+    margin: 5px;
+    width: 30em;
+}
+
+.info {
+    overflow: auto;
+}
+
+img {
+    padding-left: 40px;
+    height: 100px;
+    width: 100px;
+    padding
+}
+
+ul {
+     list-style-type: none;
+ }
+
+span {
+    font-family: Arial, Sans-serif;
+    font-weight: bold;
+}

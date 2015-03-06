@@ -5,12 +5,14 @@
             private $name;
             private $phone;
             private $address;
+            private $sexImage;
 
 
-            function __construct($name, $phone, $address){
+            function __construct($name, $phone, $address, $sexImage = "/images/possible.jpeg"){
                 $this->name = $name;
                 $this->phone = $phone;
                 $this->address = $address;
+                $this->sex = $sexImage;
             }
 
             // getters and setters
@@ -36,6 +38,14 @@
 
             function setAddress($new_address){
                 $this->address = $new_address;
+            }
+
+            function getSexImage(){
+                return $this->sex;
+            }
+
+            function setSexImage($new_sex){
+                $this->sex = $new_sex;
             }
 
             //session methods
