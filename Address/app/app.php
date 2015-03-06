@@ -20,10 +20,20 @@
 
     $app->post("/new_contact", function() use($app) {
         $new_contact = new Contact($_POST['new_name'], $_POST['new_phone'], $_POST['new_address']);
-        $new_contact->save();
+
+        if (!in_array($new_contact, Contact::getAll())){
+            $new_contact->save();
+        }
 
         return $app['twig']->render('enter_contact.php', array('newPerson' => $new_contact));
     });
+
+    $app->post("/delete_contact", function() use($app){
+        Contact::deleteAll();
+
+        return $app['twig']->render('delete_contact.php');
+    });
+
 
 
     return $app;
