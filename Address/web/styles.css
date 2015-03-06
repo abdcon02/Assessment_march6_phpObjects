@@ -17,7 +17,7 @@ body {
 input {
     border-radius: 2pt;
     width: 25m;
-    border: 1px solid black;
+    border: 2px solid #7f90bc;
     display: block;
     margin: 2px;
 }
@@ -26,14 +26,20 @@ input {
     display: inline;
 }
 
+.form {
+    font-family: Arial, Sans-serif;
+    border: 3px solid #00217a;
+    padding: 10px;
+    margin: 5px;
+    width: 30em;
+}
+
 button {
     display: block;
     margin-top: 10px;
 }
 
-a {
-    text-decoration: none;
-}
+
 
 .contact {
     border: 3px solid #f2a1a1;
@@ -60,4 +66,13 @@ ul {
 span {
     font-family: Arial, Sans-serif;
     font-weight: bold;
+}
+
+h1, h3 {
+    text-align: center;
+    font-family: Georgia, Serif;
+}
+
+a {
+    text-decoration: none;
 }

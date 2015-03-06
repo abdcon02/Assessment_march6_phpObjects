@@ -22,6 +22,8 @@
                 {% endfor %}
                 <div id="inputs"
                     <div class=form>
+                        <h3>Edit your Address Book</h3>
+                        <h4>Add a Contact</h4>
                         <form action="new_contact" method="post">
                             <label for="new_name">Enter Contacts Name:</label>
                             <input id="new_name" name="new_name" type="text" required>
@@ -36,8 +38,7 @@
 
                             <button type="sumbit" class="button">Add your Contact</button>
                         </form>
-                    </div>
-                    <div>
+                        <h4>Delete Contacts</h4>
                         <form action="delete_contact" method="post">
                             <button type="submit">Delete All Contacts</button>
                         </form>

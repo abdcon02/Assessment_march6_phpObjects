@@ -8,12 +8,16 @@
         <div class="container">
             <h1>New Contact</h1>
                 <h3>This is your new contact</h3>
-                    <ul>
-                        <li><img src="{{ newPerson.getSexImage }}"/></li>
-                        <li><span>Name: </span>{{ newPerson.getName }}</li>
-                        <li><span>Phone Number: </span>{{ newPerson.getPhone }}</li>
-                        <li><span>Address: </span>{{ newPerson.getAddress }}</li>
-                    </ul>
+                <div class="contact">
+                    <img src="{{ newPerson.getSexImage }}"/>
+                    <div class="info">
+                        <ul>
+                            <li><span>Name: </span>{{ newPerson.getName }}</li>
+                            <li><span>Phone Number: </span>{{ newPerson.getPhone }}</li>
+                            <li><span>Address: </span>{{ newPerson.getAddress }}</li>
+                        </ul>
+                    </div>
+
                 <a href="/">
                     <button type="submit" class="button">Back to Address Book</button>
                 </a>
