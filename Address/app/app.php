@@ -15,30 +15,33 @@
 
     $app->get("/", function() use($app){
 
-        return $app['twig']->render('booklet.php', array('contacts' => Contact::getAll()));
+        return $app['twig']->render('booklet.twig', array('contacts' => Contact::getAll()));
     });
 
     $app->post("/new_contact", function() use($app) {
         $new_contact = new Contact($_POST['new_name'], $_POST['new_phone'], $_POST['new_address'], $_POST['gender']);
-
-// Get the right image
-        // if ($new_contact[3] = "Male") {
-        //     $new_contact->setSex("/images/male.jpg");
-        // }
 
 // No Duplicates
         if (!in_array($new_contact, Contact::getAll())){
             $new_contact->save();
         }
 
-        return $app['twig']->render('enter_contact.php', array('newPerson' => $new_contact));
+        return $app['twig']->render('create_contacts.twig', array('newPerson' => $new_contact));
     });
 
     $app->post("/delete_contact", function() use($app){
         Contact::deleteAll();
 
-        return $app['twig']->render('delete_contact.php');
+        return $app['twig']->render('delete_contacts.twig');
     });
+
+// Delete Single contact option (PLEASE GOD TELL ME WHY THIS WONT WORK)
+    // $app->post("/delete_single_contact", function() use($app){
+    //     Contact::deleteSingle($_POST['single_delete']);
+    //
+    //     return $app['twig']->render('delete_contacts.twig');
+    // });
+
 
 
 

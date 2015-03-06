@@ -15,7 +15,7 @@
                 $this->sex = $sexImage;
             }
 
-            // getters and setters
+// getters and setters
             function getName(){
                 return $this->name;
             }
@@ -48,7 +48,7 @@
                 $this->sex = $new_sex;
             }
 
-            //session methods
+//session methods
             function save(){
                 array_push($_SESSION['list_of_contacts'], $this);
             }
@@ -60,6 +60,19 @@
             static function deleteAll(){
                 $_SESSION['list_of_contacts'] = array();
             }
+//delete single method (PLEASE GOD TELL ME WHY THIS WONT WORK)
+            // static function deleteSingle($del_name){
+            //
+            //     $contacts = $_SESSION['list_of_contacts'];
+            //
+            //     $key = array_search($del_name, $contacts);
+            //
+            //     unset($contacts[$key]);
+            //
+            //     $contacts = $_SESSION['list_of_contacts'];
+            //
+            //     return $_SESSION['list_of_contacts'];
+            // }
 
 
     }
