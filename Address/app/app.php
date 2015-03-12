@@ -26,13 +26,13 @@
             $new_contact->save();
         }
 
-        return $app['twig']->render('create_contacts.twig', array('newPerson' => $new_contact));
+        return $app['twig']->render('create_contact.twig', array('newPerson' => $new_contact));
     });
 
     $app->post("/delete_contact", function() use($app){
         Contact::deleteAll();
 
-        return $app['twig']->render('delete_contacts.twig');
+        return $app['twig']->render('delete_contact.twig');
     });
 
 // Delete Single contact option (PLEASE GOD TELL ME WHY THIS WONT WORK)
